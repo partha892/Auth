@@ -2,11 +2,13 @@
 import cookieParser from "cookie-parser";
 import express from "express";
 
+
 // Import routers
 import userRouter from "./src/routers/user.routers.js";
 
 // Create Express app
 const app = express();
+app.use(cookieParser());
 
 // 2. Middleware
 app.use(express.json());
